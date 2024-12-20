@@ -1,0 +1,14 @@
+conda create -n idba_v1.1.3_241220
+
+conda activate idba_v1.1.3_241220
+
+conda install automake
+#
+
+https://github.com/loneknightpy/idba.git
+
+Note that IDBA assemblers are designed for short reads (around 100bp). If you want to assemble paired-end reads with longer read length, please modify the constant kMaxShortSequence in src/sequence/short_sequence.h to support longer read length.
+
+Please find the manual by running the assembler without any parameters. For example:
+
+kMaxShortSequence : 128 -> 200
